@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tra cứu điểm</title>
+</head>
+<body>
+    <h2>Tra cứu điểm thi</h2>
+    <form method="post">
+        <input type="text" name="sbd" placeholder="Nhập số báo danh">
+        <button type="submit">Tra cứu</button>
+    </form>
+
+    {% if ketqua %}
+        {% if ketqua == "Không tìm thấy số báo danh." %}
+            <p>{{ ketqua }}</p>
+        {% else %}
+            <p>Họ tên: {{ ketqua.hoten }} | Điểm: {{ ketqua.diem }}</p>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
